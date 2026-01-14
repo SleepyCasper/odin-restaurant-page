@@ -1,0 +1,12 @@
+:root {
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --header-contact-bg-and-logotxt: #474747;
+    --header-contact-btn-bg: #5C5C5C;
+    --header-white-bg-and-text: #F9F9F7;
+    --header-btn-hover: #DBDFD0;
+    --header-btn-color: #2C2F24;
+    --header-book-color: #182226;
+
+    --hero-btn-hover: #AD343E;
+    --heading: #2C2F24;
+}
