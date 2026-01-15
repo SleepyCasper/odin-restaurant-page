@@ -1,0 +1,48 @@
+.content-home {
+    flex: 1;
+    display: flex;
+    gap: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: url(../media/img/home-hero-bg.png) no-repeat center;
+    background-size: cover;
+}
+
+.content-home button {
+    height: 2rem;
+    padding: 4px 16px;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--header-white-bg-and-text);
+    color: var(--header-btn-color);
+}
+
+.content-home button {
+    color: var(--header-book-color);
+    border: solid 2px #182226;
+    padding: 0.75rem 2rem;
+    font-weight: 700;
+}
+
+.content-home button {
+    height: 4rem;
+    border-radius: 2rem;
+}
+
+.content-home button:hover {
+    background-color: var(--hero-btn-hover);
+    color: white;
+    border: solid 2px var(--hero-btn-hover);
+}
+
+.content-home .text,
+.content-home .buttons {
+    max-width: 41.9rem;
+}
+
+.content-home > .text > p {
+    padding: 2rem 4rem 0 4rem;
+}
