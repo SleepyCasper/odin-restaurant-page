@@ -1,12 +1,26 @@
 :root {
+    /* colors */
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --header-contact-bg-and-logotxt: #474747;
-    --header-contact-btn-bg: #5C5C5C;
-    --header-white-bg-and-text: #F9F9F7;
+    --bg-grey: #474747;
+    --text-grey: #414536;
+    --light: #F9F9F7;
     --header-btn-hover: #DBDFD0;
     --header-btn-color: #2C2F24;
     --header-book-color: #182226;
 
-    --hero-btn-hover: #AD343E;
+    --accent-red: #AD343E;
     --heading: #2C2F24;
+
+    /* font styles */
+    --heading-h1: 400 6.25rem/5.3rem "Playfair Display", serif;
+    --heading-h2: 500 3.4rem/3.8rem "Playfair Display", serif;
+    --heading-h3: 700 1.5rem/1.9rem "DM Sans", serif;
+
+    --body-16-regular: 400 1rem/1.5rem "DM Sans", sans-serif, var(--system-ui);
+    --body-16-medium: 500 1rem/1.5rem "DM Sans", sans-serif, var(--system-ui);
+    --body-16-bold: 700 1rem/1.5rem "DM Sans", sans-serif, var(--system-ui);
+    --body-18-regular: 400 1.125rem/1.75rem "DM Sans", sans-serif, var(--system-ui);
+    --body-18-medium: 500 1.125rem/1.75rem "DM Sans", sans-serif, var(--system-ui);
+    --body-20-regular: 400 1.25rem/2rem "DM Sans", sans-serif, var(--system-ui);
+    --body-20-bold: 700 1.25rem/2rem "DM Sans", sans-serif, var(--system-ui);
 }

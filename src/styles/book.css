@@ -1,0 +1,50 @@
+.content-book {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-top: 5rem;
+    padding-bottom: 10%;
+}
+
+.content-book .text {
+    margin-bottom: 4.5rem;
+    max-width: 36rem;
+    text-align: center;
+    z-index: 5;
+}
+
+.content-book h1 {
+    margin-bottom: 1.5rem;
+}
+
+.content-book form {
+    background-color: white;
+    position: relative;
+    max-height: fit-content;
+    box-shadow: 0 3px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.content-book form::after {
+    content: "";
+    position: absolute;
+
+    top: 50%; 
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('../media/img/book-map.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+
+    z-index: -1;
+    pointer-events: none;
+}

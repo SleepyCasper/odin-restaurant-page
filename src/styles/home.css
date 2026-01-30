@@ -12,30 +12,24 @@
 }
 
 .content-home button {
-    height: 2rem;
-    padding: 4px 16px;
-    border: none;
-    border-radius: 1rem;
-    background-color: var(--header-white-bg-and-text);
-    color: var(--header-btn-color);
-}
-
-.content-home button {
+    background-color: transparent;
     color: var(--header-book-color);
     border: solid 2px #182226;
     padding: 0.75rem 2rem;
-    font-weight: 700;
-}
-
-.content-home button {
+    font: var(--body-16-bold);
     height: 4rem;
     border-radius: 2rem;
 }
 
+.content-home .buttons {
+    display: flex;
+    gap: 1rem;
+}
+
 .content-home button:hover {
-    background-color: var(--hero-btn-hover);
+    background-color: var(--accent-red);
     color: white;
-    border: solid 2px var(--hero-btn-hover);
+    border: solid 2px var(--accent-red);
 }
 
 .content-home .text,
@@ -44,5 +38,6 @@
 }
 
 .content-home > .text > p {
+    font: var(--body-20-regular);
     padding: 2rem 4rem 0 4rem;
 }

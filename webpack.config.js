@@ -32,6 +32,13 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+        generator: {
+          filename: (pathData) => {
+            // Keep the folder structure relative to src
+            const filepath = pathData.filename.replace('src/', '');
+            return filepath;
+          }
+        }
       },
     ],
   },

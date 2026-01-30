@@ -1,0 +1,67 @@
+.content-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5.2rem;
+    padding: 5rem 10%;
+    background-color: var(--light);
+    width: 100%;
+}
+
+.content-contact .text p,
+.content-contact .info p:last-child {
+    font: var(--body-18-regular);
+}
+
+.content-contact .text p {
+    color: var(--text-grey);
+}
+
+.content-contact .info p:last-child,
+label {
+    color: var(--heading);
+}
+
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.5rem;
+    align-items: center;
+    width: 100%;
+}
+
+.feedback .text {
+    max-width: 34rem;
+}
+
+.feedback h1 {
+    margin-bottom: 1.5rem;
+}
+
+
+#message {
+    border-radius: 1rem;
+    min-height: 9.75rem;
+    min-width: 100%;
+    max-width: 100%;
+    resize: vertical;
+}
+
+
+.content-contact .info {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5.6rem;
+    row-gap: 1.7rem;
+}
+
+.content-contact .info p:first-child {
+    font: var(--body-20-bold);
+    margin-bottom: 1.2rem;
+}
+
+.content-contact .number h3 {
+    color: var(--accent-red);
+}

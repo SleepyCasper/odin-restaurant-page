@@ -1,0 +1,275 @@
+.content-about {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.content-about .hero {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 9.5rem;
+    background-color: var(--light);
+    gap: 5.6rem;
+}
+
+.content-about .card-location {
+    position: relative;
+}
+
+.content-about .card-location img {
+    height: 35.4rem;
+    margin-right: 3.1rem;
+    margin-bottom: 3.1rem;
+    border-radius: 0.75rem;
+}
+
+.content-about .container-card {
+    position: absolute;
+    background-color: var(--bg-grey);
+    color: white;
+    padding: 3.1rem;
+    bottom: 0rem;
+    right: 0rem;
+    z-index: 2;
+    max-width: 25.7rem;
+    border-radius: 0.75rem;
+}
+
+.content-about .card-location ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 2.8rem;
+    padding-left: 2.5rem;
+}
+
+.content-about .card-location li::before {
+    position: absolute;
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 1.3rem;
+    width: 1.3rem;
+    left: 0;
+}
+
+.content-about .card-location li:first-child::before {
+    background-image: url(../media/icons/phone.svg);
+    filter: invert(100%);
+}
+
+.content-about .card-location li:nth-child(2)::before {
+    background-image: url(../media/icons/email.svg);
+    filter: invert(100%);
+}
+
+.content-about .card-location li:last-child::before {
+    background-image: url(../media/icons/location.svg);
+}
+
+.content-about .hero > .text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    min-width: 45ch;
+    max-width: 75ch;
+}
+
+.content-about .presentation {
+    display: flex;
+    flex-direction: column;
+}
+
+.presentation > .video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2.1rem;
+    padding: 13.2rem 0;
+    padding-inline: clamp(2rem, 20vw, 35rem);
+    background: url(../media/img/about-bg.png) no-repeat center;
+    background-size: cover;
+}
+
+.video > img {
+    height: 6.6rem;
+    width: 6.6rem;
+}
+
+.video > h2 {
+    color: var(--light);
+}
+
+.container-present {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5.4rem;
+    row-gap: 2.2rem;
+    padding: 5.9rem 10.25rem;
+}
+
+.features {
+    display: flex;
+    flex: 1;
+    gap: 1.25rem;
+    min-width: 18rem;
+    align-items: flex-start;
+}
+
+.container-present .title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.content-about .info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    column-gap: 3rem;
+    padding: 7.5rem 5%;
+    background-color: var(--light);
+}
+
+.content-about .info > .info-left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 45rem;
+    gap: 3.75rem;
+}
+
+.info-left > .text {
+    align-self: self-start;
+    max-width: 75ch;
+    min-width: 45ch;
+}
+
+.info-left > .text p {
+    margin-top: 1.25rem;
+}
+
+.info-left > .facts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-height: 23.25rem;
+    max-width: 38.1rem;
+}
+
+@media screen and (max-width: 1300px) {
+    .info-left > .facts {
+        grid-template-columns: repeat(auto-fit, 18.3rem);
+        min-width: 38.1rem;
+        max-width: 100%;
+        max-height: fit-content;
+    }
+}
+
+.info-left p {
+    color: var(--text-grey);
+}
+
+.card-fact {
+    height: 10.9rem;
+    width: 18.3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    justify-content: center;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.card-fact p:first-child {
+    font: var(--heading-h2);
+    color: var(--heading);
+}
+
+.card-fact p:last-child {
+    font: var(--body-18-medium);
+}
+
+.info > img {
+    max-width: 34.7rem;
+    max-height: 42.5rem;
+    border-radius: 0.75rem;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 6.1rem 10% 8.4rem 10%;
+    align-items: center;
+}
+
+.testimonial .container-testimonial {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); 
+   grid-template-rows: auto 1fr auto auto;
+   gap: 1.5rem;
+   align-items: stretch;
+}
+
+.testimonial .card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+
+    background-color: var(--light);
+    border-radius: 0.75rem;
+    padding: 2.2em;
+}
+
+.testimonial .card::after {
+    content: "";
+    grid-row: 3;
+    border-top: solid 1px #DBDFD0;
+}
+
+.testimonial .card h3 {
+    color: var(--accent-red);
+    margin-bottom: 0;
+    align-self: start;
+}
+
+.testimonial .card > p {
+    color: var(--text-grey);
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+.testimonial .text {
+    padding-bottom: 2rem;
+}
+
+.testimonial .user {
+    grid-row: 4;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding-top: 1rem;
+    align-self: end;
+}
+
+.testimonial .user p:first-child {
+    font: var(--body-16-bold);
+    color: var(--heading);
+}
+
+.testimonial .user p:last-child,
+.testimonial .text p:last-child {
+    color: var(--text-grey);
+}
+
+.testimonial img {
+    height: 4.4rem;
+}

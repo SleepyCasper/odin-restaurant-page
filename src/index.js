@@ -4,6 +4,7 @@ import { renderAbout } from "./about.js";
 import { renderMenu } from "./menu.js";
 import { renderContact } from "./contact.js";
 import { renderBook } from "./book.js";
+import { fadeTransition } from "./utils.js";
 
 const RenderHandler = (function() {
     const content = document.getElementById("content");
@@ -13,15 +14,56 @@ const RenderHandler = (function() {
     const btnContact = document.getElementById("contact");
     const btnBook = document.getElementById("book");
 
-    initPage(content);
-
+    let currentPage = 'home';
+    
+    const loadHome = () => {
+        initPage(content, {
+            onBook: () => {
+                if (currentPage !== 'book') {
+                    currentPage = 'book';
+                    fadeTransition(content, () => renderBook(content));
+                }
+            },
+            onMenu: () => {
+                if (currentPage !== 'menu') {
+                    currentPage = 'menu';
+                    fadeTransition(content, () => renderMenu(content));
+                }
+            }
+        });
+    };
+    loadHome();
     btnHome.addEventListener('click', () => {
-        initPage(content);
+        if (currentPage !== 'home') {
+            currentPage = 'home';
+            fadeTransition(content, loadHome);
+        }
     })
-
     btnAbout.addEventListener('click', () => {
-        renderAbout(content);
+        if (currentPage !== 'about') {
+            currentPage = 'about';
+            fadeTransition(content, () => renderAbout(content));
+        }
     })
+    btnMenu.addEventListener('click', () => {
+        if (currentPage !== 'menu') {
+            currentPage = 'menu';
+            fadeTransition(content, () => renderMenu(content));
+        }
+    })
+    btnContact.addEventListener('click', () => {
+        if (currentPage !== 'contact') {
+            currentPage = 'contact';
+            fadeTransition(content, () => renderContact(content));
+        }
+    })
+    btnBook.addEventListener('click', () => {
+        if (currentPage !== 'book') {
+            currentPage = 'book';
+            fadeTransition(content, () => renderBook(content));
+        }
+    })
+    
 })();
 
 

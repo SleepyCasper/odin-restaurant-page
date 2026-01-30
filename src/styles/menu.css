@@ -1,0 +1,158 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 6% 8.3rem 6%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menu > p {
+    font: var(--body-18-regular);
+    margin-top: 1.25em;
+}
+
+.menu > p,
+.menu h1 {
+    max-width: 34.8rem;
+}
+
+.menu .buttons {
+    display: flex;
+    gap: 0.9rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.menu button {
+    font: var(--body-16-bold);
+    border: var(--header-btn-hover) solid 1px;
+    border-radius: 3.1rem;
+    background-color: inherit;
+    height: 3rem;
+    width: 9.4rem;
+}
+
+.menu button:first-child {
+    width: 7.5rem;
+}
+
+.menu button:hover {
+    background-color: var(--accent-red);
+    border: var(--accent-red) solid 1px;
+    color: white;
+}
+
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 19.5rem);
+    gap: 1.5rem;
+    width: 95%;
+    margin-top: 4.5rem;
+    place-content: center;
+}
+
+.dishes .dish-card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    row-gap: 0.9em;
+    width: 19.5rem;
+    min-height: 27.8rem;
+    border: 1.5px solid var(--header-btn-hover);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-origin: border-box;
+    background-clip: border-box;
+    border-radius: 0.75rem;
+    padding: 0 1.8rem 2.1rem 1.8rem;
+}
+
+.dishes .dish-card::after {
+    content: '';
+    height: 14.6rem;
+    grid-row: 1;
+    margin-bottom: 0.9em;
+}
+
+.dish-card .cost {
+    grid-row: 2;
+    color: var(--accent-red);
+}
+
+.dish-card .dish-name {
+    grid-row: 3;
+    font: var(--body-20-bold);
+}
+
+.dish-card .description {
+    grid-row: 4;
+    color: var(--text-grey);
+}
+
+.delivery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 4rem;
+    justify-content: center;
+    padding: 7.5rem 8%;
+    background-color: var(--light);
+}
+
+.delivery .text {
+    max-width: 70ch;
+    flex: 1 1 30ch;
+    justify-items: center;
+}
+
+.delivery h2 {
+    margin-bottom: 1.25em;
+}
+
+.delivery p {
+    color: var(--text-grey);
+}
+
+.delivery-apps {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.delivery div[class*="group"] {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.delivery button {
+    height: 5.6rem;
+    background-color: white;
+    border: none;
+    border-radius: 0.75rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 1px 20px 0 rgb(238, 238, 238);
+    transition: 0.2s ease;
+}
+
+.delivery button:hover {
+    transform: scale(1.05);
+}
+
+.delivery .group1 > button {
+    width: 13.8rem;
+}
+
+.delivery .group2 > button {
+    width: 16.25rem;
+}
+
+.delivery .group3 > button {
+    width: 14.4rem;
+}

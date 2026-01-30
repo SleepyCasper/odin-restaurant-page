@@ -3,6 +3,7 @@
 @import "./about.css";
 @import "./menu.css";
 @import "./contact.css";
+@import "./book.css";
 
 *,
 ::before,
@@ -96,38 +97,122 @@ summary {
 }
 
 /*////////////////////////////////////////////////////////*/
-/* * {
-    outline: 1px solid red;
-} */
+* {
+    /* outline: 1px solid red; */
+}
+
+html {
+    font-size: 0.8rem;
+}
 
 body {
     position: relative;
-    font-family: "DM Sans", sans-serif, var(--system-ui);
-    font-size: 1.25rem;
-    line-height: 2rem;
-    height: 100vh;
+    overflow-y: auto;
+    font: var(--body-16-regular);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 button {
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.5rem;
+    font: var(--body-16-medium);
 }
 
 h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 6.25rem;
-    font-weight: 400;
+    font: var(--heading-h1);
     text-align: center;
-    line-height: 5.3rem;
     color: var(--heading);
+}
+
+h2 {
+    font: var(--heading-h2);
+    color: var(--heading);
+}
+
+h3 {
+    font: var(--heading-h3);
+    letter-spacing: 0.03em;
+}
+
+li {
+    list-style: none;
 }
 
 header {
     position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 50px 0 rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1.5rem;
+    background-color: white;
+    padding: 2.5em;
+    border-radius: 1rem;
+    box-shadow: 0 3px 50px 0 rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 50rem;
+}
+
+input,
+select {
+    height: 3.75rem;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 0.5px solid var(--header-btn-hover);
+    border-radius: 4.5rem;
+}
+
+form .row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+form .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+form .row .wrapper {
+    flex: 1;             
+    min-width: 200px;    
+}
+
+label {
+    font: var(--body-16-bold);
+}
+
+footer {
+    background-color: var(--bg-grey);
+    color: var(--light);
+    padding: 0.7rem 1.5rem;
+}
+
+footer a {
+    text-decoration: none;
+    font: var(--body-16-bold);
+    color: var(--light);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.credits {
+    display: flex;
+    justify-content: space-between;
 }
 
 .up {
@@ -135,11 +220,9 @@ header {
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-between;
-    background-color: var(--header-contact-bg-and-logotxt);
-    color: var(--header-white-bg-and-text);
+    background-color: var(--bg-grey);
+    color: var(--light);
     padding: 0.7rem 9.4rem;
-    font-size: 1rem;
-    line-height: 1.5rem;
 }
 
 .contact {
@@ -149,8 +232,8 @@ header {
     row-gap: 1rem;
 }
 
-.number,
-.email {
+header .number,
+header .email {
     flex: 1;
     position: relative;
     min-width: fit-content;
@@ -209,15 +292,10 @@ nav {
     row-gap: 1.2rem;
     flex-wrap: wrap;
     min-height: 5.25rem;
-    padding: 1.6rem 9.7rem 1.6rem 10rem;
+    padding: 1.4rem 9.7rem 1.4rem 10rem;
     align-items: center;
     justify-content: center;
-    background-color: var(--header-white-bg-and-text);
-}
-
-nav > button:last-child {
-    border-radius: 1.5rem;
-    height: 3rem;
+    background-color: var(--light);
 }
 
 @media (max-width: 1136px) {
@@ -243,7 +321,8 @@ nav > p {
     font-style: italic;
     line-height: 1.8rem;
     letter-spacing: -0.025rem;
-    color: var(--header-contact-bg-and-logotxt);
+    color: var(--bg-grey);
+    padding-left: 4.4rem;
 }
 
 nav > p::before {
@@ -253,7 +332,7 @@ nav > p::before {
     content: "";
     height: 3.5rem;
     width: 3.5rem;
-    left: -4.3rem;
+    left: 0;
     bottom: -0.7rem;
 }
 
@@ -262,7 +341,7 @@ nav button {
     padding: 4px 16px;
     border: none;
     border-radius: 1rem;
-    background-color: var(--header-white-bg-and-text);
+    background-color: var(--light);
     color: var(--header-btn-color);
 }
 
@@ -277,16 +356,36 @@ nav > .center {
     gap: 0.5rem;
     color: var(--header-btn-color);
 }
-
 nav > button:last-child {
-    color: var(--header-book-color);
-    border: solid 2px #182226;
-    padding: 0.75rem 2rem;
-    font-weight: 700;
+    border-radius: 1.5rem;
+    height: 3rem;
 }
 
-nav > button:last-child:hover {
-    background-color: var(--hero-btn-hover);
+button.btn-red {
+    background-color: transparent;
+    color: var(--header-book-color);
+    border: solid 2px #182226;
+    border-radius: 7.4rem;
+    padding: 0.75rem 2rem;
+    font: var(--body-16-bold);
+}
+
+button.btn-red:hover {
+    background-color: var(--accent-red);
     color: white;
-    border: solid 2px var(--hero-btn-hover);
+    border: solid 2px var(--accent-red);
+}
+
+form button {
+    height: 4rem;
+    padding: 1.25rem 2rem ;
+}
+
+#content {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#content.fade-out {
+    opacity: 0;
 }
